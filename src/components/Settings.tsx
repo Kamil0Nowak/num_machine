@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 type Props = {
     setInputValue: (e: any) => void,
     value: number,
@@ -7,7 +9,13 @@ type Props = {
 
 const Settings = (props: Props) => {
     return (
-        <form className="flex flex-col items-center" onSubmit={e => e.preventDefault()}>
+        <motion.form
+            className="flex flex-col items-center"
+            onSubmit={e => e.preventDefault()}
+            initial={{ opacity: 0.8, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <input
                 type="number" min="1" max="35" name="number" id="number" placeholder="Ilość graczy..."
                 className="w-[20%] py-2 px-4 rounded text-gray-800  outline-none"
@@ -20,7 +28,7 @@ const Settings = (props: Props) => {
             >
                 Losujemy!
             </button>
-        </form>
+        </motion.form>
     )
 }
 
