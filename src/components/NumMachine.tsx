@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Settings from "./Settings"
 import Winner from "./Winner"
 import { Hearts } from 'react-loader-spinner'
