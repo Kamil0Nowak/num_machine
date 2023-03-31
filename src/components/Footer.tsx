@@ -2,11 +2,11 @@ type Props = {}
 
 export const Footer = (props: Props) => {
     return (
-        <footer>
-            <h4 className="text-center">
-                Crafted with ❤ by <a className="" href="#">Kamil</a> for students.
+        <footer className="bg-gray-900 opacity-70 p-4">
+            <h4>
+                Crafted with ❤ by <a className="hover:text-red-300" href="#">Kamil</a> for students.
             </h4>
-            <h5 className="text-center text-sm">
+            <h5 className="text-sm">
                 Thank you <strong>Freepik</strong> for favicon!
             </h5>
         </footer>

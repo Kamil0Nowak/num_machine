@@ -1,10 +1,13 @@
 import { Footer } from "./components/Footer"
+import Header from "./components/Header"
+import NumMachine from "./components/NumMachine"
 
 const App = () => {
 
   return (
     <>
-      <h2>Lorem, ipsum dolor.</h2>
+      <Header />
+      <NumMachine />
       <Footer />
     </>
   )
