@@ -28,8 +28,6 @@ button {
 
 @media screen and (max-width: 800px) {
     #wheel {
-        /* height: 300px;
-        width: 90%; */
         margin: 0 -6rem;
     }
 }

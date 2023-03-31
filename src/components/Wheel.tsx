@@ -40,7 +40,7 @@ const Wheel = (props: Props) => {
                 segments={segments}
                 segColors={segColors}
                 winningSegment='won 10'
-                onFinished={(winner) => onFinished(winner)}
+                onFinished={(winner: any) => onFinished(winner)}
                 primaryColor='#ddd'
                 contrastColor='black'
                 buttonText='Losuj'
