@@ -39,7 +39,9 @@ const NumMachine = (props: Props) => {
                 visible={isLoading}
             />
             {!isLoading && isWinnerSet && <Winner num={num} />}
-            <Settings value={inputValue} setInputValue={setInputValue} onLotteryStart={onLotteryStart} />
+            {!isLoading && (
+                <Settings value={inputValue} setInputValue={setInputValue} onLotteryStart={onLotteryStart} />
+            )}
         </main>
     )
 }
