@@ -27,12 +27,16 @@ const NumMachine = (props: Props) => {
             setIsLoading(false)
             const randomNumber = genWinnerNumber(inputValue)
             if (alreadyWinners.has(randomNumber)) {
-                setNum(genWinnerNumber(inputValue))
+                const nextRandomNumber = genWinnerNumber(inputValue)
+                if (alreadyWinners.has(nextRandomNumber)) {
+                    setNum(genWinnerNumber(inputValue))
+                }
+                setNum(nextRandomNumber)
             } else {
                 setNum(randomNumber)
             }
             setIsWinnerSet(true)
-        }, 300)
+        }, 3000)
     }
     return (
         <main className="h-full flex flex-col items-center mt-16">
