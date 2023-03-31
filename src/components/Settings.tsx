@@ -18,7 +18,7 @@ const Settings = (props: Props) => {
         >
             <input
                 type="number" min="1" max="35" name="number" id="number" placeholder="Ilość graczy..."
-                className="w-[20%] py-2 px-4 rounded text-gray-800  outline-none"
+                className="w-[70%] py-2 px-4 rounded text-gray-800 text-3xl outline-none"
                 value={props.value}
                 onChange={(e) => props.setInputValue(e.target.value)}
             />

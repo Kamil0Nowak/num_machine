@@ -36,7 +36,7 @@ const NumMachine = (props: Props) => {
                 setNum(randomNumber)
             }
             setIsWinnerSet(true)
-        }, 3000)
+        }, 2500)
     }
     return (
         <main className="h-full flex flex-col items-center mt-16">
