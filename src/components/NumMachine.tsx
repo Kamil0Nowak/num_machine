@@ -27,7 +27,7 @@ const NumMachine = (props: Props) => {
         }, 3000)
     }
     return (
-        <main className="h-full flex flex-col items-center mt-32">
+        <main className="h-full flex flex-col items-center mt-16">
 
             <Hearts
                 height="380"
