@@ -1,17 +1,19 @@
 import { motion } from 'framer-motion'
 
-type Props = {}
+type Props = {
+    text: string
+}
 
-const Header = ({ }: Props) => {
+const Header = (props: Props) => {
     return (
         <header className="bg-gray-900 opacity-70 p-4 py-6">
             <motion.h1
-                className="text-6xl font-bold"
+                className="text-3xl md:text-6xl font-bold"
                 initial={{ y: -10, opacity: 0.5 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4 }}
             >
-                Kto dziś ma szczęście?
+                {props.text}
             </motion.h1>
         </header>
     )

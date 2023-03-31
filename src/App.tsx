@@ -1,13 +1,19 @@
-import { Footer } from "./components/Footer"
-import Header from "./components/Header"
-import NumMachine from "./components/NumMachine"
+import Footer from "./components/ui/Footer"
+import LuckyNumber from "./pages/LuckyNumber"
+import { Route, Routes } from 'react-router-dom'
+import WheelOfGlory from "./pages/WheelOfGlory"
+import Nav from "./components/ui/Nav"
 
 const App = () => {
 
   return (
     <>
-      <Header />
-      <NumMachine />
+      <Routes>
+        <Route path="/" element={<LuckyNumber />} />
+        <Route path="/wheel" element={<WheelOfGlory />} />
+      </Routes>
+
+      <Nav />
       <Footer />
     </>
   )

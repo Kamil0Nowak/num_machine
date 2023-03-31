@@ -38,13 +38,15 @@ const NumMachine = (props: Props) => {
             setIsWinnerSet(true)
         }, 2500)
     }
+
+
     return (
         <main className="h-full flex flex-col items-center mt-16">
 
             <Hearts
                 height="380"
                 width="380"
-                color="#c7475f"
+                color="#f23737a3"
                 ariaLabel="hearts-loading"
                 wrapperStyle={{}}
                 wrapperClass=""

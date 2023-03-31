@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 type Props = {}
 
-export const Footer = (props: Props) => {
+const Footer = (props: Props) => {
     return (
         <footer
             className="bg-gray-900 opacity-70 p-4">
@@ -23,3 +23,5 @@ export const Footer = (props: Props) => {
         </footer>
     )
 }
+
+export default Footer
