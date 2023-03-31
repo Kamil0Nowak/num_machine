@@ -14,7 +14,7 @@ const Settings = (props: Props) => {
             onSubmit={e => e.preventDefault()}
             initial={{ opacity: 0.8, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
         >
             <input
                 type="number" min="1" max="35" name="number" id="number" placeholder="Ilość graczy..."

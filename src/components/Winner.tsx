@@ -1,5 +1,6 @@
 import Confetti from 'react-confetti'
 import { motion } from 'framer-motion'
+
 type Props = {
     num: number,
 }
