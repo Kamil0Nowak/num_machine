@@ -9,12 +9,15 @@ type Props = {}
 const NumMachine = (props: Props) => {
     const [inputValue, setInputValue] = useState(1)
     const [num, setNum] = useState(0)
+    const [alreadyWinners, setAlreadyWinners] = useState<Set<number>>(new Set())
     const [isLoading, setIsLoading] = useState(false)
     const [isWinnerSet, setIsWinnerSet] = useState(false)
 
 
     const genWinnerNumber = (max: number) => {
-        return Math.floor((Math.random() * max) + 1)
+        const randomNumber = Math.floor((Math.random() * max) + 1)
+        setAlreadyWinners(prev => prev.add(randomNumber))
+        return randomNumber
     }
 
 
@@ -22,9 +25,14 @@ const NumMachine = (props: Props) => {
         setIsLoading(true)
         setTimeout(() => {
             setIsLoading(false)
-            setNum(genWinnerNumber(inputValue))
+            const randomNumber = genWinnerNumber(inputValue)
+            if (alreadyWinners.has(randomNumber)) {
+                setNum(genWinnerNumber(inputValue))
+            } else {
+                setNum(randomNumber)
+            }
             setIsWinnerSet(true)
-        }, 3000)
+        }, 300)
     }
     return (
         <main className="h-full flex flex-col items-center mt-16">
